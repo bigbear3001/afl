@@ -2,6 +2,16 @@
 american fuzzy lop
 ==================
 
+  Patched version that contains a docker-compose definition to enable compiling
+  on Ubuntu 18.04 with only gcc 7.3.0 available.
+  
+  Compile with:
+  ```
+  docker-compose run compile-afl make BIN_PATH=/usr/local/bin_host install
+  ```
+  
+  Original Readme continues here:
+
   Written and maintained by Michal Zalewski <lcamtuf@google.com>
 
   Copyright 2013, 2014, 2015, 2016 Google Inc. All rights reserved.
