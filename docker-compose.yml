@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  compile-afl:
+    image: gcc:6.4
+    volumes:
+      - .:/afl
+      - /usr/local/bin:/usr/local/bin_host
+      - /user/local/lib/afl:/user/local/lib/afl
+      - /user/local/share/doc:/user/local/share/doc
+    working_dir: /afl
+    command: ['make', 'BIN_PATH=/usr/local/bin_host']
